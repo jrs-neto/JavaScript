@@ -2,14 +2,14 @@
 function isTruthy(value) {
   return !!value
 }
-console.log(isTruthy(' '));
+console.log(isTruthy(0))
 
 // Crie uma função matemática que retorne o perímetro de um quadrado
 // lembrando: perímetro é a soma dos quatro lados do quadrado
 function perimetroQuadrado(lado) {
   return lado * 4;
 }
-console.log(perimetroQuadrado(4));
+console.log(perimetroQuadrado(4))
 
 // Crie uma função que retorne o seu nome completo
 // ela deve possuir os parâmetros: nome e sobrenome
@@ -21,30 +21,32 @@ console.log(fullName('José', 'Rodrigues'))
 // Crie uma função que verifica se um número é par
 function evenOrOdd(value) {
   if(value % 2 === 0) {
-    return 'The result is Even.'
+    return 'The number is Even.'
   } else {
-    return 'The result is Odd.';
+    return 'The number is Odd.'
   }
 }
 console.log(evenOrOdd(4))
 
 // Crie uma função que retorne o tipo de
 // dado do argumento passado nela (typeof)
-function returnType(type) {
-  return typeof type
+function returnTypeof(type) {
+  return typeof type;
 }
-console.log(returnType(true));
+console.log(returnTypeof(true))
 
 // addEventListener é uma função nativa do JavaScript
 // o primeiro parâmetro é o evento que ocorre e o segundo o Callback
 // utilize essa função para mostrar no console o seu nome completo
 // quando o evento 'click' ocorrer.
 addEventListener('click', function() {
-  console.log('José Rodrigues');
-});
+  console.log('José Rodrigues')
+})
 
-// Corrija o erro abaixo // Corrigido! 
+
+// Corrija o erro abaixo // Corrigido, a variável totalPaises foi movida para fora da função e passou a ter escopo global podendo ser acessada pelas duas funções.
 var totalPaises = 193;
+
 function precisoVisitar(paisesVisitados) {
   return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
 }

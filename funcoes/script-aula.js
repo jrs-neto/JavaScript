@@ -1,18 +1,18 @@
 function areaQuadrado(lado) {
   return lado * lado;
 }
-
-console.log(areaQuadrado(4));
+console.log(areaQuadrado(10));
 
 function pi() {
   return 3.14;
 }
-let total = 5 * pi();
 
-console.log(pi());
+let total = 5 * pi(); // Retorna 15.7
+
+console.log(total);
 
 function imc(peso, altura) {
-  let imc = peso / (altura * altura);
+  const imc = peso / (altura * altura);
   return imc;
 }
 
@@ -20,35 +20,32 @@ console.log(imc(80, 1.8));
 
 function favoriteColor(color) {
   if(color === 'Blue') {
-    return 'I like blue.';
+    return 'My favorite color is Blue!';
   } else if(color === 'Green') {
-    return 'I like green.';
+    return 'My favorite color is Green!';
   } else {
-    return 'I don\'t like colors';
+    return 'This ins\'t my favorite color.';
   }
 }
-console.log(favoriteColor('Blue'));
 
-addEventListener('click', function() {
-  console.log('Oi');
-})
+console.log(favoriteColor('Red'));
 
-// function mostraConsole() {
-//   console.log('Oi');
-// }
+function mostraConsole() {
+  console.log('Hello World!');
+}
+addEventListener('click', mostraConsole);
 
-// addEventListener('click', mostraConsole);
 function imc2(peso, altura) {
   const imc = peso / (altura ** 2);
   console.log(imc);
 }
 
-imc2(20, 1.8); //undefined
-console.log(imc2(1000, 1.8)) // retorna o imc e undefined
+// imc2(80, 1.8); 
+console.log(imc2(100, 1.9)) // retorna o imc e undefined
 
 function terceiraIdade(idade) {
   if(typeof idade !== 'number') {
-    return 'Por favor preencha um número'
+    return 'Por favor, preencha um número'
   } else if(idade >= 60) {
     return true;
   } else {
@@ -56,24 +53,24 @@ function terceiraIdade(idade) {
   }
 }
 
-console.log(terceiraIdade('Oi'));
+console.log(terceiraIdade(' '));
 
-let totalPaises = 193;
+const totalPaises = 193;
 function faltaVisitar(paisesVisitados) {
-  return `Falta visitar ${totalPaises - paisesVisitados}.`;
+  return `Falta visitar ${totalPaises - paisesVisitados} países.`
 }
 
-console.log(faltaVisitar(30))
+console.log(faltaVisitar(10));
 
-let profissao = 'Designer';
+let profissao = 'André';
 
 function dados() {
   let nome = 'André';
-  let idade = 29;
+  let idade = 28;
   function outrosDados() {
     let endereco = 'Rio de Janeiro';
-    let idade = 30;
-    return `${nome}, ${idade}, ${endereco}, ${profissao}`
+    let idade = 29;
+    return `${nome}, ${idade}, ${endereco}, ${profissao}`;
   }
   return outrosDados();
 }
