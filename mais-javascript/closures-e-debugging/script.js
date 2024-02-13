@@ -1,4 +1,4 @@
-// debugger;
+debugger;
 function contagem() {
   let total = 0;
   return function incremento() {
